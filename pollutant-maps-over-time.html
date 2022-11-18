@@ -59,12 +59,12 @@
     <div class="row">
         <div class="col-md-7">
             <p>Choose pollutant:<br>
-            <button type="button" class="btn btn-sm btn-outline-dark active">Black carbon</button>
-            <button type="button" class="btn btn-sm btn-outline-dark">Nitric oxide</button>
-            <button type="button" class="btn btn-sm btn-outline-dark">NO<sub>2</sub></button>
-            <button type="button" class="btn btn-sm btn-outline-dark">O<sub>3</sub></button>
-            <button type="button" class="btn btn-sm btn-outline-dark">PM<sub>2.5</sub></button>
-            <button type="button" class="btn btn-sm btn-outline-dark">SO<sub>2</sub></button>
+            <button type="button" class="btn btn-sm btn-outline-dark active" value="bc">Black carbon</button>
+            <button type="button" class="btn btn-sm btn-outline-dark" value="no">Nitric oxide</button>
+            <button type="button" class="btn btn-sm btn-outline-dark" value="no2">NO<sub>2</sub></button>
+            <button type="button" class="btn btn-sm btn-outline-dark" value="o3">O<sub>3</sub></button>
+            <button type="button" class="btn btn-sm btn-outline-dark" value="pm">PM<sub>2.5</sub></button>
+            <button type="button" class="btn btn-sm btn-outline-dark" value="so">SO<sub>2</sub></button>
         </div>
 
         <div class="col-md-5">
@@ -87,36 +87,55 @@
 
 
     <script>
+        /*
+        This couple of functions takes the button and slider input to create the variable polYear, which is the pollutant and year.
+        When we have rasters for each pollutant x year combo, then we can set the map to display the corresponding raster, and to change on button click or slider change.
+        */
+
         var map = L.map('map').setView([40.715554,-74.0026642],11); // [Lat,Long],Zoom
         L.tileLayer('https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=dwIJ8hO2KsTMegUfEpYE',{
             attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
         }).addTo(map);
 
-        // Power pollutant buttons
+        var pollutant = 'bc';
+        var chosenYear = 2020;
+        var polYear;
+
+        // Change var pollutant and polYear on Button Click
         const btns = document.querySelectorAll(".btn")
         for (var i = 0; i < btns.length; i++) {
             btns[i].addEventListener("click", function() {
               var current = document.getElementsByClassName("active");
               current[0].className = current[0].className.replace(" active", "");
               this.className += " active";
+              pollutant = this.value
+              polYear = pollutant+chosenYear
+              console.log(polYear) // show us polYear!
             });
           }
 
-        // change year value on dragging slider
+        // Change year value when dragging slider
         const year = document.getElementById('yearInput')
         year.addEventListener("click",function(){
-            var chosenYear = year.value;
-            document.getElementById('printYear').innerHTML = chosenYear
+            chosenYear = year.value;
+            updateYear()
         })
 
-        // change year value on using slider buttons
+        // Change year value on using slider buttons
         const arrows = document.querySelectorAll('.sliderButton')
         for (var i = 0; i < arrows.length; i++) {
             arrows[i].addEventListener("click", function(){
-                console.log(Number(year.value) + Number(this.value))
                 year.value = (Number(year.value) + Number(this.value))
-                document.getElementById('printYear').innerHTML = year.value
+                chosenYear = year.value
+                updateYear();
             })
+        }
+
+        // Updates the year based on slider value (from drag or button)
+        function updateYear() {
+            document.getElementById('printYear').innerHTML = chosenYear
+            polYear = pollutant+chosenYear
+            console.log(polYear) // show us polYear!
         }
 
     </script>
