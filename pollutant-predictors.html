@@ -1,11 +1,294 @@
 <!DOCTYPE html>
 <head>
     <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://raw.githubusercontent.com/nychealth/EH-dataportal/prod-deploy/scss/theme.css">
+
+    <style>
+
+        .hide {
+        display: none;
+        }
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+        
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        
+        input:checked + .slider {
+          background-color: #2196F3;
+        }
+        
+        input:focus + .slider {
+          box-shadow: 0 0 1px #2196F3;
+        }
+        
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+          border-radius: 34px;
+        }
+        
+        .slider.round:before {
+          border-radius: 50%;
+        }
+        </style>
 
 </head>
 
 <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7">
+                <p>Choose pollutant:<br>
+                    <div class="">
+                        <button type="button" class="btn polbtn btn-outline-dark active" value="bc">Black carbon</button>
+                        <button type="button" class="btn polbtn btn-outline-dark" value="no">Nitric oxide</button>
+                        <button type="button" class="btn polbtn btn-outline-dark" value="no2">NO<sub>2</sub></button>
+                        <button type="button" class="btn polbtn  btn-outline-dark" value="o3">O<sub>3</sub></button>
+                        <button type="button" class="btn polbtn btn-outline-dark" value="pm">PM<sub>2.5</sub></button>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="mt-1">
+                    <div id="bc" class="subbutton">
+                        <!--black carbon source info-->
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Indicator</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Associated sources and interpretation</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">Industrial area</th>
+                                <td>Area of industrial land use within 1,000 meters</td>
+                                <td>Emissions from trucks idling and traveling through industrial areas and industrial combustion equipment</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Road density</th>
+                                <td>Percent impervious road surface within 250 meters</td>
+                                <td>Emissions from motor vehicles on paved roadways</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">PM<sub>2.5</sub></th>
+                                <td>PM<sub>2.5</sub> emissions from heat and hot water boilers in buildings within 1,000 meters</td>
+                                <td>Combustion of heating oil and natural gas</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Traffic density</th>
+                                <td>Weighted by relative PM<sub>2.5</sub> emissions rates by vehicle type (car, truck, bus) within 50 meters</td>
+                                <td>PM<sub>2.5</sub> emissions from all on-road motor vehicle based on vehicle miles and the relative emissions rates of different vehicle types</td>
+                              </tr>
+                            </tbody>
+                          </table>
+    
+                    </div>
+    
+                    <div id="no" class="subbutton hide">
+                        <!--NO source buttons -->
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Indicator</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Associated sources and interpretation</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">Industrial area</th>
+                                <td>Area of industrial land use within 1,000 meters</td>
+                                <td>Emissions from trucks idling and traveling through industrial areas and industrial combustion equipment</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Traffic density</th>
+                                <td>Weighted by relative PM<sub>2.5</sub> emissions rates by vehicle type (car, truck, bus) within 50 meters</td>
+                                <td>PM<sub>2.5</sub> emissions from all on-road motor vehicle based on vehicle miles and the relative emissions rates of different vehicle types</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Bus traffic</th>
+                                <td>Location on a bus route (compared to non-bus route locations</td>
+                                <td>Emissions from buses and other vehicles on busy roadways - indicator of traffic congestion</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">NOx</sub></th>
+                                <td>NOx emissions from buildings heat and hot water boilers within 400 meters, taking into account changes in building heating fuels over time</td>
+                                <td>Combustion of heating oil and natural gas</td>
+                              </tr>
+
+                            </tbody>
+                          </table>                    </div>
+
+                    <div id="no2" class="subbutton hide">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Indicator</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Associated sources and interpretation</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">Industrial area</th>
+                                <td>Area of industrial land use within 1,000 meters</td>
+                                <td>Emissions from trucks idling and traveling through industrial areas and industrial combustion equipment</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Bus traffic</th>
+                                <td>Location on a bus route (compared to non-bus route locations</td>
+                                <td>Emissions from buses and other vehicles on busy roadways - indicator of traffic congestion</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Building density</sub></th>
+                                <td>Area of interior building space within 1,000 meters</td>
+                                <td>Combustion of heating oil and natural gas</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Road density</th>
+                                <td>Percent impervious road surface within 250 meters</td>
+                                <td>Emissions from motor vehicles on paved roadways</td>
+                              </tr>
+
+                            </tbody>
+                          </table> 
+
+                    </div>
+
+                    <div id="o3" class="subbutton hide">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Indicator</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Associated sources and interpretation</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">NO<sub>2</sub></th>
+                                <td>Level of NO<sub>2</sub> measured at the same location</td>
+                                <td>Nitric oxides (NO<sub>x</sub> at elevated concentrations react with ground-level ozone (O<sub>3</sub> to create NO<sub>2</sub> and O<sub>3</sub>, also called "quenching ozone."</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Tree cover</th>
+                                <td>Tree cover within 50 meters</td>
+                                <td>Reduced levels thorugh reactions of ozone with leaf surfaces.</td>
+                              </tr>
+                            </tbody>
+                          </table> 
+                    </div>
+
+                    <div id="pm" class="subbutton hide">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Indicator</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Associated sources and interpretation</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">Commercial cooking</th>
+                                <td>Number of permitted commercial cooking grills and charbroilers within 1,000 meters</td>
+                                <td>Emissions from commercial cooking.</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Traffic density</th>
+                                <td>Weighted by relative PM<sub>2.5</sub> emissions rates by vehicle type (car, truck, bus) within 50 meters</td>
+                                <td>PM<sub>2.5</sub> emissions from all on-road motor vehicle based on vehicle miles and the relative emissions rates of different vehicle types</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Industrial area</th>
+                                <td>Area of industrial land use within 1,000 meters</td>
+                                <td>Emissions from trucks idling and traveling through industrial areas and industrial combustion equipment</td>
+                              </tr>
+                            </tbody>
+                          </table> 
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var pollutant = 'bc';
+
+        // Change var pollutant and polYear on Button Click
+        const btns = document.querySelectorAll(".polbtn")
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+              var current = document.getElementsByClassName("active");
+              current[0].className = current[0].className.replace(" active", "");
+              this.className += " active";
+              pollutant = this.value
+
+              // show/hide subbuttons
+              var subButtons = document.getElementsByClassName("subbutton");
+              for (let i = 0; i < subButtons.length; i ++ ) {
+                subButtons[i].classList.add('hide')
+            }
+              console.log(this.value)
+              document.getElementById(this.value).classList.remove("hide")
+
+            });
+          }
+
+
+
+    </script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
