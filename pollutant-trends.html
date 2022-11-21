@@ -9,7 +9,67 @@
         .hide {
         display: none;
         }
-    </style>
+
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 60px;
+          height: 34px;
+        }
+        
+        .switch input { 
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+        
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          left: 4px;
+          bottom: 4px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        
+        input:checked + .slider {
+          background-color: #2196F3;
+        }
+        
+        input:focus + .slider {
+          box-shadow: 0 0 1px #2196F3;
+        }
+        
+        input:checked + .slider:before {
+          -webkit-transform: translateX(26px);
+          -ms-transform: translateX(26px);
+          transform: translateX(26px);
+        }
+        
+        /* Rounded sliders */
+        .slider.round {
+          border-radius: 34px;
+        }
+        
+        .slider.round:before {
+          border-radius: 50%;
+        }
+        </style>
 
 </head>
 
@@ -26,7 +86,11 @@
                         <button type="button" class="btn polbtn btn-outline-dark" value="pm">PM<sub>2.5</sub></button>
                         <button type="button" class="btn polbtn btn-outline-dark" value="so">SO<sub>2</sub></button>
                     </div>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col">
                 <div class="mt-1">
                     <div id="bc" class="subbutton">
                         <!--black carbon source buttons-->
@@ -65,17 +129,46 @@
                         <button type="button" class="btn btn-sm btn-outline-secondary active">Boilers using residual oil</button>
                         <button type="button" class="btn btn-sm btn-outline-secondary">Nighttime population density</button>
                     </div>
-
-
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-12 border" style="height:350px;">
-                VIZZES HERE
+        <div class="row" id="4up">
+            <div class="col-6 border" style="height:195x;">
+                Vizzes 
+            </div>
+            <div class="col-6 border" style="height:195px;">
+                by season
+            </div>
+            <div class="col-6 border" style="height:195px;">
+                Vizzes 
+            </div>
+            <div class="col-6 border" style="height:195px;">
+                by season
             </div>
         </div>
+
+        <div class="row hide" id="3up">
+            <div class="col-12 border" style="height:130px;">
+                Vizzes 
+            </div>
+            <div class="col-12 border" style="height:130px;">
+                 by 
+            </div>
+            <div class="col-12 border" style="height:130px;">
+                tertile
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col">
+                <button type="button" id="seasonbutton" value="1" onclick="tertile(1)" class="bybtn btn btn-sm btn-outline-success active">By season</button>
+                <button type="button" id="tertilebutton" value="2" onclick="tertile(2)" class="bybtn btn btn-sm btn-outline-success">By tertile</button>
+            </div>
+        </div>
+
     
 
     </div>
@@ -102,6 +195,24 @@
 
             });
           }
+
+        function tertile(x) {
+            if (x === 1) {
+                document.getElementById('tertilebutton').classList.remove('active')
+                document.getElementById('seasonbutton').classList.add('active')
+                document.getElementById('3up').classList.add('hide')
+                document.getElementById('4up').classList.remove('hide')
+
+
+            } else {
+                document.getElementById('tertilebutton').classList.add('active')
+                document.getElementById('seasonbutton').classList.remove('active')
+                document.getElementById('4up').classList.add('hide')
+                document.getElementById('3up').classList.remove('hide')
+            }
+        }
+
+
 
 
     </script>
