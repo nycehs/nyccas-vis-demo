@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20210813</CreaDate><CreaTime>14390800</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.7\ArcToolbox\Toolboxes\Spatial Analyst Tools.tbx\Idw" Date="20210813" Time="143908">Idw "pred_no_season_avg_12yr_80K.csv Events" noAA12 X:\EODEShare\NYCCAS\Analyses\pollutant_map_work\Maps_for_Reports\NYCCAS_12yr_surface\noAA 100 1 "FIXED 500 100" #</Process></lineage></DataProperties></Esri></metadata>
