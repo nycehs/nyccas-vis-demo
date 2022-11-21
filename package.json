@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nycehs/nyccas-vis-demo#readme",
   "dependencies": {
+    "georaster": "^1.5.6",
     "georaster-layer-for-leaflet": "^3.10.0"
   }
 }
