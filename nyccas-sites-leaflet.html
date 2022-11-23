@@ -24,8 +24,7 @@
             filter: hue-rotate(230deg);
         }
         img.retired { 
-            filter: hue-rotate(45deg); 
-            opacity: 0.35;
+            opacity: 0.25;
         }
 
     </style>
@@ -37,8 +36,6 @@
         <div id="map"></div>
     </div>
 </div>
-
-
 
 
     <script>
@@ -57,9 +54,10 @@
         // using d3.csv to import csv - may use a lighter approach...?
         d3.csv('data/Sites_in_history.csv').then(function(data) {
             sites = data;
-            console.log(sites)
+            console.table(sites)
             addSitesToMap()
         })
+
 
         // loop through sites_in_history.csv, add them to map as points
         function addSitesToMap() {
