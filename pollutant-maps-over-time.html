@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
 
+    <!-- Georaster dependencies -->
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+
     <style>
         .slidecontainer {
           width: 100%;
@@ -101,6 +106,36 @@
         var chosenYear = 2020;
         var polYear;
 
+        var rasterURL = "RasterFiles/Geotiff/noAA12final.tif";
+
+        function updateRaster() {
+            rasterURL = 'raster/'+polYear+'.tif'
+            console.log('rasterURL: ' + rasterURL)
+            fetch(rasterURL)
+            .then(response => response.arrayBuffer())
+            .then(arrayBuffer => {
+                parseGeoraster(arrayBuffer).then(georaster => {
+                console.log("georaster:", georaster);
+    
+                /*
+                    GeoRasterLayer is an extension of GridLayer,
+                    which means can use GridLayer options like opacity.
+                    Just make sure to include the georaster option!
+                    http://leafletjs.com/reference-1.2.0.html#gridlayer
+                */
+                var layer = new GeoRasterLayer({
+                    georaster: georaster,
+                    opacity: 0.8
+                });
+                layer.addTo(map);
+    
+                map.fitBounds(layer.getBounds());
+    
+            });
+            });
+        }
+        updateRaster();
+
         // Change var pollutant and polYear on Button Click
         const btns = document.querySelectorAll(".btn")
         for (var i = 0; i < btns.length; i++) {
@@ -109,8 +144,9 @@
               current[0].className = current[0].className.replace(" active", "");
               this.className += " active";
               pollutant = this.value
-              polYear = pollutant+chosenYear
+              polYear = pollutant+"-"+chosenYear
               console.log(polYear) // show us polYear!
+              updateRaster()
             });
           }
 
@@ -134,103 +170,11 @@
         // Updates the year based on slider value (from drag or button)
         function updateYear() {
             document.getElementById('printYear').innerHTML = chosenYear
-            polYear = pollutant+chosenYear
-            console.log(polYear) // show us polYear!
+            polYear = pollutant+"-"+chosenYear
+            console.log(polYear) // show us polYear! Then we'll use /raster/polYear.tif
+            updateRaster()
         }
 
-        // dunno if we'll need this info, or if we can just name the different rasters [pollutant]-[year] and create that name (like the variable polYear) to ingest the correct raster onto the map. 
-        var rasterURLs = {
-            "bc": {
-                2009: "2009URL",
-                2010: "2010URL",
-                2011: "2011url",
-                2012: "2012url",
-                2013: "2013url",
-                2014: "2014url",
-                2015: "2015url",
-                2016: "2016url",
-                2017: "2017url",
-                2018: "2018url",
-                2019: "2019url",
-                2020: "2020url",
-                2021: "2021url"
-                },
-            "no": {
-                2009: "2009URL",
-                2010: "2010URL",
-                2011: "2011url",
-                2012: "2012url",
-                2013: "2013url",
-                2014: "2014url",
-                2015: "2015url",
-                2016: "2016url",
-                2017: "2017url",
-                2018: "2018url",
-                2019: "2019url",
-                2020: "2020url",
-                2021: "2021url"
-                },
-            "no2" : {
-                2009: "2009URL",
-                2010: "2010URL",
-                2011: "2011url",
-                2012: "2012url",
-                2013: "2013url",
-                2014: "2014url",
-                2015: "2015url",
-                2016: "2016url",
-                2017: "2017url",
-                2018: "2018url",
-                2019: "2019url",
-                2020: "2020url",
-                2021: "2021url"
-                },
-            "o3": {
-                2009: "2009URL",
-                2010: "2010URL",
-                2011: "2011url",
-                2012: "2012url",
-                2013: "2013url",
-                2014: "2014url",
-                2015: "2015url",
-                2016: "2016url",
-                2017: "2017url",
-                2018: "2018url",
-                2019: "2019url",
-                2020: "2020url",
-                2021: "2021url"
-                },
-            "pm": {
-                2009: "2009URL",
-                2010: "2010URL",
-                2011: "2011url",
-                2012: "2012url",
-                2013: "2013url",
-                2014: "2014url",
-                2015: "2015url",
-                2016: "2016url",
-                2017: "2017url",
-                2018: "2018url",
-                2019: "2019url",
-                2020: "2020url",
-                2021: "2021url"
-                },
-            "so": {
-                2009: "2009URL",
-                2010: "2010URL",
-                2011: "2011url",
-                2012: "2012url",
-                2013: "2013url",
-                2014: "2014url",
-                2015: "2015url",
-                2016: "2016url",
-                2017: "2017url",
-                2018: "2018url",
-                2019: "2019url",
-                2020: "2020url",
-                2021: "2021url"
-                }
-        }
 
     </script>
 
