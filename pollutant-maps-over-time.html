@@ -106,10 +106,10 @@
         var chosenYear = 2020;
         var polYear;
 
-        var rasterURL = "RasterFiles/Geotiff/noAA12final.tif";
+        var rasterURL = "raster/no2009.tif";
 
         function updateRaster() {
-            rasterURL = 'raster/'+polYear+'.tif'
+            // rasterURL = 'raster/'+polYear+'.tif'
             console.log('rasterURL: ' + rasterURL)
             fetch(rasterURL)
             .then(response => response.arrayBuffer())
