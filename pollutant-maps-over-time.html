@@ -97,7 +97,7 @@
         When we have rasters for each pollutant x year combo, then we can set the map to display the corresponding raster, and to change on button click or slider change.
         */
 
-        var map = L.map('map').setView([40.715554,-74.0026642],12); // [Lat,Long],Zoom
+        var map = L.map('map').setView([40.715554,-74.0026642],11.5); // [Lat,Long],Zoom
         L.tileLayer('https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=dwIJ8hO2KsTMegUfEpYE',{
             attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
         }).addTo(map);
@@ -106,9 +106,33 @@
         var chosenYear = '2020';
         var polYear = pollutant+chosenYear
 
-        var rasterURL = 'raster/'+polYear+'.tif';
+        var rasterURL = 'raster/bc2020.tif';
+        var raster;
+
+        fetch(rasterURL)
+        .then(response => response.arrayBuffer())
+        .then(arrayBuffer => {
+            parseGeoraster(arrayBuffer).then(georaster => {
+            // console.log("georaster:", georaster);
+
+            /*
+                GeoRasterLayer is an extension of GridLayer,
+                which means can use GridLayer options like opacity.
+                Just make sure to include the georaster option!
+                http://leafletjs.com/reference-1.2.0.html#gridlayer
+            */
+            raster = new GeoRasterLayer({
+                georaster: georaster,
+                opacity: 0.8
+            });
+            raster.addTo(map);
+            // map.fitBounds(layer.getBounds());
+        });
+        });
+
 
         function updateRaster() {
+            map.removeLayer(raster)
             rasterURL = 'raster/'+polYear+'.tif'
             console.log('rasterURL: ' + rasterURL)
             fetch(rasterURL)
@@ -123,18 +147,19 @@
                     Just make sure to include the georaster option!
                     http://leafletjs.com/reference-1.2.0.html#gridlayer
                 */
-                var layer = new GeoRasterLayer({
+                raster = new GeoRasterLayer({
                     georaster: georaster,
                     opacity: 0.8
                 });
-                layer.addTo(map);
+                raster.addTo(map);
     
                 // map.fitBounds(layer.getBounds());
     
             });
             });
         }
-        updateRaster();
+
+        
 
         // Change var pollutant and polYear on Button Click
         const btns = document.querySelectorAll(".btn")
