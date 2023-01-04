@@ -23,9 +23,20 @@
 
 <body>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div id="map"></div>
+    <div class="container-fluid p-0">
+        <div class="row no-gutters p-0 m-0">
+            <div class="col-sm-2 col-3 pl-0">
+                <button type="button" class="btn btn-sm btn-block btn-outline-dark active" value="bc">Black carbon</button>
+                <button type="button" class="btn  btn-sm btn-block  btn-outline-dark" value="no">Nitric oxide</button>
+                <button type="button" class="btn  btn-sm btn-block btn-outline-dark" value="no2">NO<sub>2</sub></button>
+                <button type="button" class="btn  btn-sm btn-block btn-outline-dark" value="o3">O<sub>3</sub></button>
+                <button type="button" class="btn  btn-sm btn-block btn-outline-dark" value="pm">PM<sub>2.5</sub></button>
+                <button type="button" class="btn  btn-sm btn-block btn-outline-dark" value="so">SO<sub>2</sub></button>
+            </div>
+            <div class="col-sm-10 col-9">
+                <div id="map"></div>
+            </div>
+
         </div>
     </div>
 
@@ -41,36 +52,62 @@
 
 
 <script>
-var map = L.map('map').setView([40.715554,-74.0026642],11); // [Lat,Long],Zoom
+var pollutant = 'bc';
+var chosenYear = '2019';
+var polYear = pollutant+chosenYear
+var rasterURL = "raster/bc2019.tif";
+addRaster(rasterURL)
+
+var map = L.map('map', {
+    minZoom: 10,
+    maxZoom: 18,
+    zoomSnap: 0.25
+}).setView([40.715554,-74.0026642],15.5); // [Lat,Long],Zoom
 L.tileLayer('https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=dwIJ8hO2KsTMegUfEpYE',{
     attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
 }).addTo(map);
 
-
-var url_to_geotiff_file = "RasterFiles/Geotiff/noAA12final.tif";
-
-fetch(url_to_geotiff_file)
-  .then(response => response.arrayBuffer())
-  .then(arrayBuffer => {
-    parseGeoraster(arrayBuffer).then(georaster => {
-      console.log("georaster:", georaster);
-
-      /*
-          GeoRasterLayer is an extension of GridLayer,
-          which means can use GridLayer options like opacity.
-          Just make sure to include the georaster option!
-          http://leafletjs.com/reference-1.2.0.html#gridlayer
-      */
-      var layer = new GeoRasterLayer({
-          georaster: georaster,
-          opacity: 0.8
-      });
-      layer.addTo(map);
-
-      map.fitBounds(layer.getBounds());
-
+function addRaster(x) {
+    if (typeof layer !== 'undefined') {
+        map.removeLayer(layer)
+    } else {}
+    fetch(x)
+    .then(response => response.arrayBuffer())
+    .then(arrayBuffer => {
+      parseGeoraster(arrayBuffer).then(georaster => {
+        console.log("georaster:", georaster);
+  
+        var layer = new GeoRasterLayer({
+            georaster: georaster,
+            opacity: 0.8
+        });
+        layer.addTo(map);
+  
+        map.fitBounds(layer.getBounds());
+  
+    });
   });
-});
+}
+
+
+
+
+
+// Change var pollutant and polYear on Button Click
+const btns = document.querySelectorAll(".btn")
+for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+        pollutant = this.value
+        polYear = pollutant+chosenYear
+        console.log("polYear: " + polYear) // show us polYear!
+        var newURL = 'raster/' + polYear + '.tif'
+        console.log('newURL: ' + newURL)
+        addRaster(newURL)
+    });
+    }
 
 </script>
 
