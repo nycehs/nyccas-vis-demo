@@ -55,37 +55,40 @@
             width:100%;
             height:90vh;
         }
+
+                    /* use this class to position elements off-screen so that only screen readers encounter them*/
+                    .sronly {
+                        position: absolute;
+                        left: -9999px;
+                    }
         </style>
 
 </head>
 
 <body>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-7">
+<div class="container-fluid p-0">
+    <div class="row no-gutters p-0 m-0">
+        <div class="col-sm-2 col-3 pl-0">
             <p>Choose pollutant:<br>
-            <button type="button" class="btn  btn-outline-dark active" value="bc">Black carbon</button>
-            <button type="button" class="btn  btn-outline-dark" value="no">Nitric oxide</button>
-            <button type="button" class="btn  btn-outline-dark" value="no2">NO<sub>2</sub></button>
-            <button type="button" class="btn  btn-outline-dark" value="o3">O<sub>3</sub></button>
-            <button type="button" class="btn btn-outline-dark" value="pm">PM<sub>2.5</sub></button>
-            <button type="button" class="btn btn-outline-dark" value="so">SO<sub>2</sub></button>
-        </div>
-
-        <div class="col-md-5">
-            <div class="float-right">
-                <p class="text-align-right">Year: <span id="printYear">2020</span><br>
-                    <button class="sliderButton" value="-1"><</button>
-                    <input type="range" min="2009" max="2020" value="2020" class="slider" id="yearInput">
-                    <button class="sliderButton" value="1">></button>
-            </div>
+            <button type="button" class="btn btn-sm btn-block  btn-outline-dark active" value="bc">Black carbon</button>
+            <button type="button" class="btn btn-sm btn-block  btn-outline-dark" value="no">Nitric oxide</button>
+            <button type="button" class="btn btn-sm btn-block  btn-outline-dark" value="no2">NO<sub>2</sub></button>
+            <button type="button" class="btn btn-sm btn-block  btn-outline-dark" value="o3">O<sub>3</sub></button>
+            <button type="button" class="btn btn-sm btn-block btn-outline-dark" value="pm">PM<sub>2.5</sub></button>
+            <button type="button" class="btn btn-sm btn-block btn-outline-dark" value="so">SO<sub>2</sub></button>
+            <hr>
+            <p>Year: <br>
+                <input type="number" min="2009" max="2020" pattern="[2009-2021]*" value="2020" id="yearInput" style="display:inline-block; width: 100%;">
 
         </div>
+
+        <div class="col-sm-10 col-9">
+            <div id="map"></div>
+        </div>
+
+
     </div>
 
-    <div class="row">
-        <div id="map"></div>
-    </div>
 </div>
 
 
@@ -182,19 +185,9 @@
             updateYear()
         })
 
-        // Change year value on using slider buttons
-        const arrows = document.querySelectorAll('.sliderButton')
-        for (var i = 0; i < arrows.length; i++) {
-            arrows[i].addEventListener("click", function(){
-                year.value = (Number(year.value) + Number(this.value))
-                chosenYear = year.value
-                updateYear();
-            })
-        }
 
         // Updates the year based on slider value (from drag or button)
         function updateYear() {
-            document.getElementById('printYear').innerHTML = chosenYear
             polYear = pollutant+chosenYear
             console.log(polYear) // show us polYear! Then we'll use /raster/polYear.tif
             updateRaster()
