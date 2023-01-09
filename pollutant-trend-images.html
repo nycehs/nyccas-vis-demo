@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/nychealth/EH-dataportal/prod-deploy/scss/theme.css">
+
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+    <!-- Georaster dependencies -->
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+
+    <style>
+        .slidecontainer {
+          width: 100%;
+        }
+        
+        /*
+        .slider {
+          -webkit-appearance: none;
+          width: 100%;
+          height: 25px;
+          background: #d3d3d3;
+          outline: none;
+          opacity: 0.7;
+          -webkit-transition: .2s;
+          transition: opacity .2s;
+        }
+        
+        .slider:hover {
+          opacity: 1;
+        }
+        
+        .slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 25px;
+          height: 25px;
+          background: #04AA6D;
+          cursor: pointer;
+        }
+        
+        .slider::-moz-range-thumb {
+          width: 25px;
+          height: 25px;
+          background: #04AA6D;
+          cursor: pointer;
+        }
+        */
+
+        #map {
+            width:100%;
+            height:90vh;
+        }
+
+                    /* use this class to position elements off-screen so that only screen readers encounter them*/
+                    .sronly {
+                        position: absolute;
+                        left: -9999px;
+                    }
+        </style>
+
+</head>
+
+<body>
+<div class="container-fluid p-0">
+    <div class="row no-gutters p-0 m-0">
+        <div class="col-2 pl-0">
+            <button type="button" class="btn btn-sm btn-block  btn-outline-dark active" value="BC">BC</button>
+            <button type="button" class="btn btn-sm btn-block  btn-outline-dark" value="NO">NO</button>
+            <button type="button" class="btn btn-sm btn-block  btn-outline-dark" value="NO2">NO<sub>2</sub></button>
+            <button type="button" class="btn btn-sm btn-block  btn-outline-dark" value="O3">O<sub>3</sub></button>
+            <button type="button" class="btn btn-sm btn-block btn-outline-dark" value="PM25">PM<sub>2.5</sub></button>
+            <button type="button" class="btn btn-sm btn-block btn-outline-dark" value="SO2">SO<sub>2</sub></button>
+            <hr>
+            <p>Year: <br>
+                <input type="number" min="2009" max="2020" pattern="[2009-2021]*" value="2020" id="yearInput" style="display:inline-block; width: 100%;">
+
+        </div>
+
+        <div class="col-10" style="background-image:URL()">
+            <img id="raster" src="/images/BC_2020.png" style="height: 83vmin; width: auto">
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+    <script>
+
+        // update image
+        var chosenYear = 2020
+        var pollutant = "BC"
+
+
+        function updateRaster() {
+            var filename = pollutant + "_" + chosenYear + ".png"
+            console.log(filename)
+            document.getElementById('raster').src = "/images/" + filename
+
+        }
+
+        // Change var pollutant and polYear on Button Click
+        const btns = document.querySelectorAll(".btn")
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+              var current = document.getElementsByClassName("active");
+              current[0].className = current[0].className.replace(" active", "");
+              this.className += " active";
+              pollutant = this.value
+              polYear = pollutant+chosenYear
+              updateRaster()
+            });
+          }
+
+        // Change year value when dragging slider
+        const year = document.getElementById('yearInput')
+        year.addEventListener("click",function(){
+            chosenYear = year.value;
+            polYear = pollutant+chosenYear
+            updateRaster()
+        })
+
+
+
+
+    </script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
