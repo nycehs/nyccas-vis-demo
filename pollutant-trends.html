@@ -98,7 +98,7 @@
             </div>
 
             <div class="col-6">
-                <p class="fs-sm">Choose emissions source:</p>
+                <p class="fs-sm" style="text-align: right;">Choose emissions source:</p>
                 <div id="subCont"></div>
             </div>
         </div>
@@ -200,7 +200,7 @@
             document.getElementById('subCont').innerHTML = '';
             for (let i = 0; i < sources.length; i++) {
                 var thisSource = sources[i]
-                var newButton = `<button type="button" class="btn btn-sm srcbtn btn-outline-secondary mr-1">${thisSource}</button>`
+                var newButton = `<button type="button" class="btn btn-sm srcbtn btn-outline-secondary mr-1 float-right">${thisSource}</button>`
                 document.getElementById('subCont').innerHTML += newButton
             };
 
