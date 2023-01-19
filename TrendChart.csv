@@ -86,18 +86,18 @@ NO2,2009,Fall,3,Traffic Density,32.96434425
 O3,2009,Summer,1,Traffic Density,27.08090034
 O3,2009,Summer,2,Traffic Density,24.93362708
 O3,2009,Summer,3,Traffic Density,19.93927291
-PM2.5,2009,Winter,1,Boiler PM₂.₅ Emissions,13.22218048
-PM2.5,2009,Winter,2,Boiler PM₂.₅ Emissions,13.75616743
-PM2.5,2009,Winter,3,Boiler PM₂.₅ Emissions,16.20445989
-PM2.5,2009,Spring,1,Boiler PM₂.₅ Emissions,10.17643238
-PM2.5,2009,Spring,2,Boiler PM₂.₅ Emissions,11.37595337
-PM2.5,2009,Spring,3,Boiler PM₂.₅ Emissions,13.58900682
-PM2.5,2009,Summer,1,Boiler PM₂.₅ Emissions,11.16233916
-PM2.5,2009,Summer,2,Boiler PM₂.₅ Emissions,11.65727989
-PM2.5,2009,Summer,3,Boiler PM₂.₅ Emissions,13.47719076
-PM2.5,2009,Fall,1,Boiler PM₂.₅ Emissions,7.864644153
-PM2.5,2009,Fall,2,Boiler PM₂.₅ Emissions,8.548760648
-PM2.5,2009,Fall,3,Boiler PM₂.₅ Emissions,10.39715362
+PM2.5,2009,Winter,1,Boiler PM2.5 Emissions,13.22218048
+PM2.5,2009,Winter,2,Boiler PM2.5 Emissions,13.75616743
+PM2.5,2009,Winter,3,Boiler PM2.5 Emissions,16.20445989
+PM2.5,2009,Spring,1,Boiler PM2.5 Emissions,10.17643238
+PM2.5,2009,Spring,2,Boiler PM2.5 Emissions,11.37595337
+PM2.5,2009,Spring,3,Boiler PM2.5 Emissions,13.58900682
+PM2.5,2009,Summer,1,Boiler PM2.5 Emissions,11.16233916
+PM2.5,2009,Summer,2,Boiler PM2.5 Emissions,11.65727989
+PM2.5,2009,Summer,3,Boiler PM2.5 Emissions,13.47719076
+PM2.5,2009,Fall,1,Boiler PM2.5 Emissions,7.864644153
+PM2.5,2009,Fall,2,Boiler PM2.5 Emissions,8.548760648
+PM2.5,2009,Fall,3,Boiler PM2.5 Emissions,10.39715362
 PM2.5,2009,Winter,1,Commercial Cooking,13.62871776
 PM2.5,2009,Winter,2,Commercial Cooking,13.70406577
 PM2.5,2009,Winter,3,Commercial Cooking,15.84625686
@@ -209,18 +209,18 @@ NO2,2010,Fall,3,Traffic Density,30.31594614
 O3,2010,Summer,1,Traffic Density,34.45220795
 O3,2010,Summer,2,Traffic Density,32.53096406
 O3,2010,Summer,3,Traffic Density,27.11364053
-PM2.5,2010,Winter,1,Boiler PM₂.₅ Emissions,9.904442012
-PM2.5,2010,Winter,2,Boiler PM₂.₅ Emissions,10.63839203
-PM2.5,2010,Winter,3,Boiler PM₂.₅ Emissions,12.7066001
-PM2.5,2010,Spring,1,Boiler PM₂.₅ Emissions,9.634277736
-PM2.5,2010,Spring,2,Boiler PM₂.₅ Emissions,10.53709117
-PM2.5,2010,Spring,3,Boiler PM₂.₅ Emissions,12.42808466
-PM2.5,2010,Summer,1,Boiler PM₂.₅ Emissions,12.4828375
-PM2.5,2010,Summer,2,Boiler PM₂.₅ Emissions,12.96850711
-PM2.5,2010,Summer,3,Boiler PM₂.₅ Emissions,14.53107052
-PM2.5,2010,Fall,1,Boiler PM₂.₅ Emissions,7.549532439
-PM2.5,2010,Fall,2,Boiler PM₂.₅ Emissions,7.772458342
-PM2.5,2010,Fall,3,Boiler PM₂.₅ Emissions,10.0257278
+PM2.5,2010,Winter,1,Boiler PM2.5 Emissions,9.904442012
+PM2.5,2010,Winter,2,Boiler PM2.5 Emissions,10.63839203
+PM2.5,2010,Winter,3,Boiler PM2.5 Emissions,12.7066001
+PM2.5,2010,Spring,1,Boiler PM2.5 Emissions,9.634277736
+PM2.5,2010,Spring,2,Boiler PM2.5 Emissions,10.53709117
+PM2.5,2010,Spring,3,Boiler PM2.5 Emissions,12.42808466
+PM2.5,2010,Summer,1,Boiler PM2.5 Emissions,12.4828375
+PM2.5,2010,Summer,2,Boiler PM2.5 Emissions,12.96850711
+PM2.5,2010,Summer,3,Boiler PM2.5 Emissions,14.53107052
+PM2.5,2010,Fall,1,Boiler PM2.5 Emissions,7.549532439
+PM2.5,2010,Fall,2,Boiler PM2.5 Emissions,7.772458342
+PM2.5,2010,Fall,3,Boiler PM2.5 Emissions,10.0257278
 PM2.5,2010,Winter,1,Commercial Cooking,10.36232028
 PM2.5,2010,Winter,2,Commercial Cooking,10.3179064
 PM2.5,2010,Winter,3,Commercial Cooking,12.57142815
@@ -332,18 +332,18 @@ NO2,2011,Fall,3,Traffic Density,34.11416539
 O3,2011,Summer,1,Traffic Density,34.36721012
 O3,2011,Summer,2,Traffic Density,32.31428271
 O3,2011,Summer,3,Traffic Density,27.21917192
-PM2.5,2011,Winter,1,Boiler PM₂.₅ Emissions,12.75116067
-PM2.5,2011,Winter,2,Boiler PM₂.₅ Emissions,13.69280896
-PM2.5,2011,Winter,3,Boiler PM₂.₅ Emissions,15.39240793
-PM2.5,2011,Spring,1,Boiler PM₂.₅ Emissions,8.12899391
-PM2.5,2011,Spring,2,Boiler PM₂.₅ Emissions,9.041670631
-PM2.5,2011,Spring,3,Boiler PM₂.₅ Emissions,10.90075352
-PM2.5,2011,Summer,1,Boiler PM₂.₅ Emissions,12.35146998
-PM2.5,2011,Summer,2,Boiler PM₂.₅ Emissions,12.63731316
-PM2.5,2011,Summer,3,Boiler PM₂.₅ Emissions,13.87860808
-PM2.5,2011,Fall,1,Boiler PM₂.₅ Emissions,8.629683849
-PM2.5,2011,Fall,2,Boiler PM₂.₅ Emissions,9.418775469
-PM2.5,2011,Fall,3,Boiler PM₂.₅ Emissions,11.20713744
+PM2.5,2011,Winter,1,Boiler PM2.5 Emissions,12.75116067
+PM2.5,2011,Winter,2,Boiler PM2.5 Emissions,13.69280896
+PM2.5,2011,Winter,3,Boiler PM2.5 Emissions,15.39240793
+PM2.5,2011,Spring,1,Boiler PM2.5 Emissions,8.12899391
+PM2.5,2011,Spring,2,Boiler PM2.5 Emissions,9.041670631
+PM2.5,2011,Spring,3,Boiler PM2.5 Emissions,10.90075352
+PM2.5,2011,Summer,1,Boiler PM2.5 Emissions,12.35146998
+PM2.5,2011,Summer,2,Boiler PM2.5 Emissions,12.63731316
+PM2.5,2011,Summer,3,Boiler PM2.5 Emissions,13.87860808
+PM2.5,2011,Fall,1,Boiler PM2.5 Emissions,8.629683849
+PM2.5,2011,Fall,2,Boiler PM2.5 Emissions,9.418775469
+PM2.5,2011,Fall,3,Boiler PM2.5 Emissions,11.20713744
 PM2.5,2011,Winter,1,Commercial Cooking,13.56750878
 PM2.5,2011,Winter,2,Commercial Cooking,13.32571649
 PM2.5,2011,Winter,3,Commercial Cooking,14.9552419
@@ -455,18 +455,18 @@ NO2,2012,Fall,3,Traffic Density,31.29516877
 O3,2012,Summer,1,Traffic Density,34.31310147
 O3,2012,Summer,2,Traffic Density,32.13169076
 O3,2012,Summer,3,Traffic Density,27.65527852
-PM2.5,2012,Winter,1,Boiler PM₂.₅ Emissions,8.878659347
-PM2.5,2012,Winter,2,Boiler PM₂.₅ Emissions,9.858868135
-PM2.5,2012,Winter,3,Boiler PM₂.₅ Emissions,11.59881122
-PM2.5,2012,Spring,1,Boiler PM₂.₅ Emissions,8.132099917
-PM2.5,2012,Spring,2,Boiler PM₂.₅ Emissions,9.126116054
-PM2.5,2012,Spring,3,Boiler PM₂.₅ Emissions,10.87008732
-PM2.5,2012,Summer,1,Boiler PM₂.₅ Emissions,10.53954828
-PM2.5,2012,Summer,2,Boiler PM₂.₅ Emissions,10.77928497
-PM2.5,2012,Summer,3,Boiler PM₂.₅ Emissions,12.39640284
-PM2.5,2012,Fall,1,Boiler PM₂.₅ Emissions,7.986303408
-PM2.5,2012,Fall,2,Boiler PM₂.₅ Emissions,8.444362546
-PM2.5,2012,Fall,3,Boiler PM₂.₅ Emissions,10.17962496
+PM2.5,2012,Winter,1,Boiler PM2.5 Emissions,8.878659347
+PM2.5,2012,Winter,2,Boiler PM2.5 Emissions,9.858868135
+PM2.5,2012,Winter,3,Boiler PM2.5 Emissions,11.59881122
+PM2.5,2012,Spring,1,Boiler PM2.5 Emissions,8.132099917
+PM2.5,2012,Spring,2,Boiler PM2.5 Emissions,9.126116054
+PM2.5,2012,Spring,3,Boiler PM2.5 Emissions,10.87008732
+PM2.5,2012,Summer,1,Boiler PM2.5 Emissions,10.53954828
+PM2.5,2012,Summer,2,Boiler PM2.5 Emissions,10.77928497
+PM2.5,2012,Summer,3,Boiler PM2.5 Emissions,12.39640284
+PM2.5,2012,Fall,1,Boiler PM2.5 Emissions,7.986303408
+PM2.5,2012,Fall,2,Boiler PM2.5 Emissions,8.444362546
+PM2.5,2012,Fall,3,Boiler PM2.5 Emissions,10.17962496
 PM2.5,2012,Winter,1,Commercial Cooking,9.365247311
 PM2.5,2012,Winter,2,Commercial Cooking,9.619164358
 PM2.5,2012,Winter,3,Commercial Cooking,11.32556907
@@ -578,18 +578,18 @@ NO2,2013,Fall,3,Traffic Density,29.92447926
 O3,2013,Summer,1,Traffic Density,31.92185327
 O3,2013,Summer,2,Traffic Density,29.5093557
 O3,2013,Summer,3,Traffic Density,25.52049053
-PM2.5,2013,Winter,1,Boiler PM₂.₅ Emissions,10.25290396
-PM2.5,2013,Winter,2,Boiler PM₂.₅ Emissions,10.77447275
-PM2.5,2013,Winter,3,Boiler PM₂.₅ Emissions,13.56641111
-PM2.5,2013,Spring,1,Boiler PM₂.₅ Emissions,6.781931594
-PM2.5,2013,Spring,2,Boiler PM₂.₅ Emissions,7.745668608
-PM2.5,2013,Spring,3,Boiler PM₂.₅ Emissions,9.197297949
-PM2.5,2013,Summer,1,Boiler PM₂.₅ Emissions,9.693616642
-PM2.5,2013,Summer,2,Boiler PM₂.₅ Emissions,10.95009431
-PM2.5,2013,Summer,3,Boiler PM₂.₅ Emissions,11.99680639
-PM2.5,2013,Fall,1,Boiler PM₂.₅ Emissions,7.547244789
-PM2.5,2013,Fall,2,Boiler PM₂.₅ Emissions,7.894260326
-PM2.5,2013,Fall,3,Boiler PM₂.₅ Emissions,9.589177044
+PM2.5,2013,Winter,1,Boiler PM2.5 Emissions,10.25290396
+PM2.5,2013,Winter,2,Boiler PM2.5 Emissions,10.77447275
+PM2.5,2013,Winter,3,Boiler PM2.5 Emissions,13.56641111
+PM2.5,2013,Spring,1,Boiler PM2.5 Emissions,6.781931594
+PM2.5,2013,Spring,2,Boiler PM2.5 Emissions,7.745668608
+PM2.5,2013,Spring,3,Boiler PM2.5 Emissions,9.197297949
+PM2.5,2013,Summer,1,Boiler PM2.5 Emissions,9.693616642
+PM2.5,2013,Summer,2,Boiler PM2.5 Emissions,10.95009431
+PM2.5,2013,Summer,3,Boiler PM2.5 Emissions,11.99680639
+PM2.5,2013,Fall,1,Boiler PM2.5 Emissions,7.547244789
+PM2.5,2013,Fall,2,Boiler PM2.5 Emissions,7.894260326
+PM2.5,2013,Fall,3,Boiler PM2.5 Emissions,9.589177044
 PM2.5,2013,Winter,1,Commercial Cooking,10.52884563
 PM2.5,2013,Winter,2,Commercial Cooking,10.81942298
 PM2.5,2013,Winter,3,Commercial Cooking,13.24788501
@@ -701,18 +701,18 @@ NO2,2014,Fall,3,Traffic Density,26.14753691
 O3,2014,Summer,1,Traffic Density,32.00630478
 O3,2014,Summer,2,Traffic Density,29.87329068
 O3,2014,Summer,3,Traffic Density,25.99572101
-PM2.5,2014,Winter,1,Boiler PM₂.₅ Emissions,12.30393408
-PM2.5,2014,Winter,2,Boiler PM₂.₅ Emissions,12.27581955
-PM2.5,2014,Winter,3,Boiler PM₂.₅ Emissions,14.54451534
-PM2.5,2014,Spring,1,Boiler PM₂.₅ Emissions,8.200478252
-PM2.5,2014,Spring,2,Boiler PM₂.₅ Emissions,9.170275125
-PM2.5,2014,Spring,3,Boiler PM₂.₅ Emissions,10.46222156
-PM2.5,2014,Summer,1,Boiler PM₂.₅ Emissions,8.520878023
-PM2.5,2014,Summer,2,Boiler PM₂.₅ Emissions,9.350597865
-PM2.5,2014,Summer,3,Boiler PM₂.₅ Emissions,10.48159884
-PM2.5,2014,Fall,1,Boiler PM₂.₅ Emissions,7.236941085
-PM2.5,2014,Fall,2,Boiler PM₂.₅ Emissions,8.25205669
-PM2.5,2014,Fall,3,Boiler PM₂.₅ Emissions,9.285193172
+PM2.5,2014,Winter,1,Boiler PM2.5 Emissions,12.30393408
+PM2.5,2014,Winter,2,Boiler PM2.5 Emissions,12.27581955
+PM2.5,2014,Winter,3,Boiler PM2.5 Emissions,14.54451534
+PM2.5,2014,Spring,1,Boiler PM2.5 Emissions,8.200478252
+PM2.5,2014,Spring,2,Boiler PM2.5 Emissions,9.170275125
+PM2.5,2014,Spring,3,Boiler PM2.5 Emissions,10.46222156
+PM2.5,2014,Summer,1,Boiler PM2.5 Emissions,8.520878023
+PM2.5,2014,Summer,2,Boiler PM2.5 Emissions,9.350597865
+PM2.5,2014,Summer,3,Boiler PM2.5 Emissions,10.48159884
+PM2.5,2014,Fall,1,Boiler PM2.5 Emissions,7.236941085
+PM2.5,2014,Fall,2,Boiler PM2.5 Emissions,8.25205669
+PM2.5,2014,Fall,3,Boiler PM2.5 Emissions,9.285193172
 PM2.5,2014,Winter,1,Commercial Cooking,12.76517063
 PM2.5,2014,Winter,2,Commercial Cooking,12.1497808
 PM2.5,2014,Winter,3,Commercial Cooking,14.24834011
@@ -824,18 +824,18 @@ NO2,2015,Fall,3,Traffic Density,26.12023645
 O3,2015,Summer,1,Traffic Density,33.16227797
 O3,2015,Summer,2,Traffic Density,30.75279316
 O3,2015,Summer,3,Traffic Density,26.87894017
-PM2.5,2015,Winter,1,Boiler PM₂.₅ Emissions,9.35918704
-PM2.5,2015,Winter,2,Boiler PM₂.₅ Emissions,10.11288623
-PM2.5,2015,Winter,3,Boiler PM₂.₅ Emissions,12.20916394
-PM2.5,2015,Spring,1,Boiler PM₂.₅ Emissions,9.037289939
-PM2.5,2015,Spring,2,Boiler PM₂.₅ Emissions,9.432422595
-PM2.5,2015,Spring,3,Boiler PM₂.₅ Emissions,10.98238863
-PM2.5,2015,Summer,1,Boiler PM₂.₅ Emissions,9.327875962
-PM2.5,2015,Summer,2,Boiler PM₂.₅ Emissions,9.907821045
-PM2.5,2015,Summer,3,Boiler PM₂.₅ Emissions,11.36667962
-PM2.5,2015,Fall,1,Boiler PM₂.₅ Emissions,6.9301431
-PM2.5,2015,Fall,2,Boiler PM₂.₅ Emissions,8.123375208
-PM2.5,2015,Fall,3,Boiler PM₂.₅ Emissions,8.73387246
+PM2.5,2015,Winter,1,Boiler PM2.5 Emissions,9.35918704
+PM2.5,2015,Winter,2,Boiler PM2.5 Emissions,10.11288623
+PM2.5,2015,Winter,3,Boiler PM2.5 Emissions,12.20916394
+PM2.5,2015,Spring,1,Boiler PM2.5 Emissions,9.037289939
+PM2.5,2015,Spring,2,Boiler PM2.5 Emissions,9.432422595
+PM2.5,2015,Spring,3,Boiler PM2.5 Emissions,10.98238863
+PM2.5,2015,Summer,1,Boiler PM2.5 Emissions,9.327875962
+PM2.5,2015,Summer,2,Boiler PM2.5 Emissions,9.907821045
+PM2.5,2015,Summer,3,Boiler PM2.5 Emissions,11.36667962
+PM2.5,2015,Fall,1,Boiler PM2.5 Emissions,6.9301431
+PM2.5,2015,Fall,2,Boiler PM2.5 Emissions,8.123375208
+PM2.5,2015,Fall,3,Boiler PM2.5 Emissions,8.73387246
 PM2.5,2015,Winter,1,Commercial Cooking,9.823305755
 PM2.5,2015,Winter,2,Commercial Cooking,9.934125392
 PM2.5,2015,Winter,3,Commercial Cooking,11.947012
@@ -947,18 +947,18 @@ NO2,2016,Fall,3,Traffic Density,26.22681163
 O3,2016,Summer,1,Traffic Density,33.88116411
 O3,2016,Summer,2,Traffic Density,31.67158028
 O3,2016,Summer,3,Traffic Density,28.57189313
-PM2.5,2016,Winter,1,Boiler PM₂.₅ Emissions,8.007778026
-PM2.5,2016,Winter,2,Boiler PM₂.₅ Emissions,8.775376743
-PM2.5,2016,Winter,3,Boiler PM₂.₅ Emissions,10.06372017
-PM2.5,2016,Spring,1,Boiler PM₂.₅ Emissions,6.986220324
-PM2.5,2016,Spring,2,Boiler PM₂.₅ Emissions,8.420265074
-PM2.5,2016,Spring,3,Boiler PM₂.₅ Emissions,9.87751894
-PM2.5,2016,Summer,1,Boiler PM₂.₅ Emissions,8.41598993
-PM2.5,2016,Summer,2,Boiler PM₂.₅ Emissions,9.375302865
-PM2.5,2016,Summer,3,Boiler PM₂.₅ Emissions,10.17257573
-PM2.5,2016,Fall,1,Boiler PM₂.₅ Emissions,6.98666286
-PM2.5,2016,Fall,2,Boiler PM₂.₅ Emissions,6.488692197
-PM2.5,2016,Fall,3,Boiler PM₂.₅ Emissions,8.194934933
+PM2.5,2016,Winter,1,Boiler PM2.5 Emissions,8.007778026
+PM2.5,2016,Winter,2,Boiler PM2.5 Emissions,8.775376743
+PM2.5,2016,Winter,3,Boiler PM2.5 Emissions,10.06372017
+PM2.5,2016,Spring,1,Boiler PM2.5 Emissions,6.986220324
+PM2.5,2016,Spring,2,Boiler PM2.5 Emissions,8.420265074
+PM2.5,2016,Spring,3,Boiler PM2.5 Emissions,9.87751894
+PM2.5,2016,Summer,1,Boiler PM2.5 Emissions,8.41598993
+PM2.5,2016,Summer,2,Boiler PM2.5 Emissions,9.375302865
+PM2.5,2016,Summer,3,Boiler PM2.5 Emissions,10.17257573
+PM2.5,2016,Fall,1,Boiler PM2.5 Emissions,6.98666286
+PM2.5,2016,Fall,2,Boiler PM2.5 Emissions,6.488692197
+PM2.5,2016,Fall,3,Boiler PM2.5 Emissions,8.194934933
 PM2.5,2016,Winter,1,Commercial Cooking,8.58810917
 PM2.5,2016,Winter,2,Commercial Cooking,8.158023978
 PM2.5,2016,Winter,3,Commercial Cooking,10.12224605
@@ -1070,18 +1070,18 @@ NO2,2017,Fall,3,Traffic Density,25.19013367
 O3,2017,Summer,1,Traffic Density,31.1000993
 O3,2017,Summer,2,Traffic Density,29.16033526
 O3,2017,Summer,3,Traffic Density,25.5266738
-PM2.5,2017,Winter,1,Boiler PM₂.₅ Emissions,7.924510893
-PM2.5,2017,Winter,2,Boiler PM₂.₅ Emissions,8.839641992
-PM2.5,2017,Winter,3,Boiler PM₂.₅ Emissions,9.394209774
-PM2.5,2017,Spring,1,Boiler PM₂.₅ Emissions,6.307842994
-PM2.5,2017,Spring,2,Boiler PM₂.₅ Emissions,6.980693092
-PM2.5,2017,Spring,3,Boiler PM₂.₅ Emissions,8.020785254
-PM2.5,2017,Summer,1,Boiler PM₂.₅ Emissions,8.815452763
-PM2.5,2017,Summer,2,Boiler PM₂.₅ Emissions,9.513474097
-PM2.5,2017,Summer,3,Boiler PM₂.₅ Emissions,10.91618582
-PM2.5,2017,Fall,1,Boiler PM₂.₅ Emissions,6.664329307
-PM2.5,2017,Fall,2,Boiler PM₂.₅ Emissions,7.068330697
-PM2.5,2017,Fall,3,Boiler PM₂.₅ Emissions,8.329836817
+PM2.5,2017,Winter,1,Boiler PM2.5 Emissions,7.924510893
+PM2.5,2017,Winter,2,Boiler PM2.5 Emissions,8.839641992
+PM2.5,2017,Winter,3,Boiler PM2.5 Emissions,9.394209774
+PM2.5,2017,Spring,1,Boiler PM2.5 Emissions,6.307842994
+PM2.5,2017,Spring,2,Boiler PM2.5 Emissions,6.980693092
+PM2.5,2017,Spring,3,Boiler PM2.5 Emissions,8.020785254
+PM2.5,2017,Summer,1,Boiler PM2.5 Emissions,8.815452763
+PM2.5,2017,Summer,2,Boiler PM2.5 Emissions,9.513474097
+PM2.5,2017,Summer,3,Boiler PM2.5 Emissions,10.91618582
+PM2.5,2017,Fall,1,Boiler PM2.5 Emissions,6.664329307
+PM2.5,2017,Fall,2,Boiler PM2.5 Emissions,7.068330697
+PM2.5,2017,Fall,3,Boiler PM2.5 Emissions,8.329836817
 PM2.5,2017,Winter,1,Commercial Cooking,8.473011497
 PM2.5,2017,Winter,2,Commercial Cooking,8.313021541
 PM2.5,2017,Winter,3,Commercial Cooking,9.380329118
@@ -1193,18 +1193,18 @@ NO2,2018,Fall,3,Traffic Density,24.48435141
 O3,2018,Summer,1,Traffic Density,32.1251881
 O3,2018,Summer,2,Traffic Density,29.72160643
 O3,2018,Summer,3,Traffic Density,26.5880835
-PM2.5,2018,Winter,1,Boiler PM₂.₅ Emissions,8.499539867
-PM2.5,2018,Winter,2,Boiler PM₂.₅ Emissions,8.587021172
-PM2.5,2018,Winter,3,Boiler PM₂.₅ Emissions,10.37755391
-PM2.5,2018,Spring,1,Boiler PM₂.₅ Emissions,6.561516885
-PM2.5,2018,Spring,2,Boiler PM₂.₅ Emissions,6.567008909
-PM2.5,2018,Spring,3,Boiler PM₂.₅ Emissions,8.928801686
-PM2.5,2018,Summer,1,Boiler PM₂.₅ Emissions,8.613959193
-PM2.5,2018,Summer,2,Boiler PM₂.₅ Emissions,9.194628732
-PM2.5,2018,Summer,3,Boiler PM₂.₅ Emissions,10.50111202
-PM2.5,2018,Fall,1,Boiler PM₂.₅ Emissions,5.485642299
-PM2.5,2018,Fall,2,Boiler PM₂.₅ Emissions,5.861427089
-PM2.5,2018,Fall,3,Boiler PM₂.₅ Emissions,7.309221044
+PM2.5,2018,Winter,1,Boiler PM2.5 Emissions,8.499539867
+PM2.5,2018,Winter,2,Boiler PM2.5 Emissions,8.587021172
+PM2.5,2018,Winter,3,Boiler PM2.5 Emissions,10.37755391
+PM2.5,2018,Spring,1,Boiler PM2.5 Emissions,6.561516885
+PM2.5,2018,Spring,2,Boiler PM2.5 Emissions,6.567008909
+PM2.5,2018,Spring,3,Boiler PM2.5 Emissions,8.928801686
+PM2.5,2018,Summer,1,Boiler PM2.5 Emissions,8.613959193
+PM2.5,2018,Summer,2,Boiler PM2.5 Emissions,9.194628732
+PM2.5,2018,Summer,3,Boiler PM2.5 Emissions,10.50111202
+PM2.5,2018,Fall,1,Boiler PM2.5 Emissions,5.485642299
+PM2.5,2018,Fall,2,Boiler PM2.5 Emissions,5.861427089
+PM2.5,2018,Fall,3,Boiler PM2.5 Emissions,7.309221044
 PM2.5,2018,Winter,1,Commercial Cooking,8.715650468
 PM2.5,2018,Winter,2,Commercial Cooking,8.480719392
 PM2.5,2018,Winter,3,Commercial Cooking,10.27949165
@@ -1322,18 +1322,18 @@ NO2,2019,Fall,3,Traffic Density,23.8118785
 O3,2019,Summer,1,Traffic Density,32.15445626
 O3,2019,Summer,2,Traffic Density,30.77244365
 O3,2019,Summer,3,Traffic Density,27.25134282
-PM2.5,2019,Winter,1,Boiler PM₂.₅ Emissions,7.046425425
-PM2.5,2019,Winter,2,Boiler PM₂.₅ Emissions,7.478375573
-PM2.5,2019,Winter,3,Boiler PM₂.₅ Emissions,9.212938077
-PM2.5,2019,Spring,1,Boiler PM₂.₅ Emissions,5.750199496
-PM2.5,2019,Spring,2,Boiler PM₂.₅ Emissions,5.826139626
-PM2.5,2019,Spring,3,Boiler PM₂.₅ Emissions,7.521310986
-PM2.5,2019,Summer,1,Boiler PM₂.₅ Emissions,8.048085939
-PM2.5,2019,Summer,2,Boiler PM₂.₅ Emissions,8.461125403
-PM2.5,2019,Summer,3,Boiler PM₂.₅ Emissions,9.73137609
-PM2.5,2019,Fall,1,Boiler PM₂.₅ Emissions,5.527499969
-PM2.5,2019,Fall,2,Boiler PM₂.₅ Emissions,6.077394954
-PM2.5,2019,Fall,3,Boiler PM₂.₅ Emissions,7.309832425
+PM2.5,2019,Winter,1,Boiler PM2.5 Emissions,7.046425425
+PM2.5,2019,Winter,2,Boiler PM2.5 Emissions,7.478375573
+PM2.5,2019,Winter,3,Boiler PM2.5 Emissions,9.212938077
+PM2.5,2019,Spring,1,Boiler PM2.5 Emissions,5.750199496
+PM2.5,2019,Spring,2,Boiler PM2.5 Emissions,5.826139626
+PM2.5,2019,Spring,3,Boiler PM2.5 Emissions,7.521310986
+PM2.5,2019,Summer,1,Boiler PM2.5 Emissions,8.048085939
+PM2.5,2019,Summer,2,Boiler PM2.5 Emissions,8.461125403
+PM2.5,2019,Summer,3,Boiler PM2.5 Emissions,9.73137609
+PM2.5,2019,Fall,1,Boiler PM2.5 Emissions,5.527499969
+PM2.5,2019,Fall,2,Boiler PM2.5 Emissions,6.077394954
+PM2.5,2019,Fall,3,Boiler PM2.5 Emissions,7.309832425
 PM2.5,2019,Winter,1,Commercial Cooking,7.568343555
 PM2.5,2019,Winter,2,Commercial Cooking,7.146115377
 PM2.5,2019,Winter,3,Commercial Cooking,9.044391552
@@ -1445,18 +1445,18 @@ NO2,2020,Fall,3,Traffic Density,22.7326175
 O3,2020,Summer,1,Traffic Density,31.25294636
 O3,2020,Summer,2,Traffic Density,30.85369542
 O3,2020,Summer,3,Traffic Density,29.16061903
-PM2.5,2020,Winter,1,Boiler PM₂.₅ Emissions,7.112797951
-PM2.5,2020,Winter,2,Boiler PM₂.₅ Emissions,7.979440488
-PM2.5,2020,Winter,3,Boiler PM₂.₅ Emissions,9.443334495
-PM2.5,2020,Spring,1,Boiler PM₂.₅ Emissions,4.371323501
-PM2.5,2020,Spring,2,Boiler PM₂.₅ Emissions,4.45808961
-PM2.5,2020,Spring,3,Boiler PM₂.₅ Emissions,5.00263496
-PM2.5,2020,Summer,1,Boiler PM₂.₅ Emissions,7.285379831
-PM2.5,2020,Summer,2,Boiler PM₂.₅ Emissions,7.383971851
-PM2.5,2020,Summer,3,Boiler PM₂.₅ Emissions,8.069152494
-PM2.5,2020,Fall,1,Boiler PM₂.₅ Emissions,5.827279319
-PM2.5,2020,Fall,2,Boiler PM₂.₅ Emissions,5.927919491
-PM2.5,2020,Fall,3,Boiler PM₂.₅ Emissions,7.283573925
+PM2.5,2020,Winter,1,Boiler PM2.5 Emissions,7.112797951
+PM2.5,2020,Winter,2,Boiler PM2.5 Emissions,7.979440488
+PM2.5,2020,Winter,3,Boiler PM2.5 Emissions,9.443334495
+PM2.5,2020,Spring,1,Boiler PM2.5 Emissions,4.371323501
+PM2.5,2020,Spring,2,Boiler PM2.5 Emissions,4.45808961
+PM2.5,2020,Spring,3,Boiler PM2.5 Emissions,5.00263496
+PM2.5,2020,Summer,1,Boiler PM2.5 Emissions,7.285379831
+PM2.5,2020,Summer,2,Boiler PM2.5 Emissions,7.383971851
+PM2.5,2020,Summer,3,Boiler PM2.5 Emissions,8.069152494
+PM2.5,2020,Fall,1,Boiler PM2.5 Emissions,5.827279319
+PM2.5,2020,Fall,2,Boiler PM2.5 Emissions,5.927919491
+PM2.5,2020,Fall,3,Boiler PM2.5 Emissions,7.283573925
 PM2.5,2020,Winter,1,Commercial Cooking,7.868895164
 PM2.5,2020,Winter,2,Commercial Cooking,7.265324125
 PM2.5,2020,Winter,3,Commercial Cooking,9.393325951
