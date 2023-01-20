@@ -86,7 +86,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-6">
-                    <p class="fs-sm">Choose pollutant:</p>
+                    <p class="fs-sm">Choose pollutant:<br>
                     <div class="">
                         <button type="button" class="btn polbtn btn-outline-dark active" value="BC">BC</button>
                         <button type="button" class="btn polbtn btn-outline-dark" value="NO">NO</button>
@@ -98,7 +98,7 @@
             </div>
 
             <div class="col-6">
-                <p class="fs-sm" style="text-align: right;">Choose emissions source:</p>
+                <p class="fs-sm" style="text-align: right;">Choose emissions source:<br>
                 <div id="subCont"></div>
             </div>
         </div>
@@ -108,7 +108,9 @@
         <div class="row mt-2">
             <div class="col-12">
                 <hr>
-                <p class="fs-lg" style="font-weight: bold;text-align:center;"><span id='polPrint' class="">Pollutant</span> by <span id='sourcePrint'>Source</span></p>
+                <p><span class="fs-lg" style="font-weight: bold;"><span id='polPrint' class="">Pollutant</span> by <span id='sourcePrint'>Source</span></span><br>
+                <em><span id="unitPrint" class="fs-sm"></span></em>
+                </p>
                 <div id="vis" style="width: 100%;"></div>
             </div>
         </div>
@@ -231,6 +233,7 @@
         function drawChart() {
             document.getElementById('polPrint').innerHTML = pollutantName
             document.getElementById('sourcePrint').innerHTML = source
+            document.getElementById('unitPrint').innerHTML = units
             let width = document.getElementById('vis').offsetWidth / 2.25
 
             chartSpec = {
@@ -253,9 +256,10 @@
                     },
                     "range": {
                         "category": [
+                          "#810f7c",
                           "#b3cde3",
-                          "#8c96c6",
-                          "#810f7c"
+                          "#8c96c6"
+
                         ]
                       }
                   },
@@ -283,7 +287,9 @@
                   ],
                   "color": {
                     "field": "Tertile", 
-                    "type": "nominal"}
+                    "type": "nominal",
+                    "legend": null
+                  }
                 }
               };
 
